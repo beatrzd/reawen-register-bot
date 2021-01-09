@@ -18,15 +18,6 @@ if(!args[0]) {
 message.react(no);
 message.channel.send(embed.setDescription(`${client.emojis.cache.get(no)} Komutu yanlış kullandınız! ${config.prefix}taglıalım aç/kapat`))
 return;    
-} else if(args[0] != "aç") {
-message.react(no);
-message.channel.send(embed.setDescription(`${client.emojis.cache.get(no)} Komutu yanlış kullandınız! ${config.prefix}taglıalım aç/kapat`))
-return;    
-} else if(args[0] != "kapat") {
-message.react(no);
-message.channel.send(embed.setDescription(`${client.emojis.cache.get(no)} Komutu yanlış kullandınız! ${config.prefix}taglıalım aç/kapat`))
-return;    
-}
 
 if (args[0] === "aç") {
 if(db.fetch(`taglıAlım.${message.guild.id}`)) return message.channel.send(embed.setDescription(`${client.emojis.cache.get(no)} Taglı alım sistemi zaten aktif!`))
