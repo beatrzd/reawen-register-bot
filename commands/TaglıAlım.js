@@ -18,7 +18,7 @@ if(!args[0]) {
 message.react(no);
 message.channel.send(embed.setDescription(`${client.emojis.cache.get(no)} Komutu yanlış kullandınız! ${config.prefix}taglıalım aç/kapat`))
 return;    
-
+}
 if (args[0] === "aç") {
 if(db.fetch(`taglıAlım.${message.guild.id}`)) return message.channel.send(embed.setDescription(`${client.emojis.cache.get(no)} Taglı alım sistemi zaten aktif!`))
 db.set(`taglıAlım.${message.guild.id}`, "taglıAlım")
