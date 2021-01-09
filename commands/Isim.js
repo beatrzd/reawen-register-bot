@@ -46,6 +46,7 @@ return;
 }
 
 message.react(yes);
+hedefKişi.setNickname(Isim);
 message.channel.send(embed.setDescription(`${client.emojis.cache.get(yes)} ${hedefKişi} kullanıcısının ismi "${Isim}" olarak değiştirildi.`))
 db.push(`isimler.${hedefKişi}`, {Isim: isim, Yaş: yaş, Yetkili: message.author.id})
 
