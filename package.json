@@ -2,9 +2,9 @@
   "name": "reawenv12register",
   "version": "0.2.0",
   "description": "Created by Reawen.",
-  "main": "reawen.js",
+  "main": "main.js",
   "scripts": {
-    "start": "node reawen.js",
+    "start": "node main.js",
     "test": "try"
   },
   "keywords": [
