@@ -12,7 +12,7 @@ let embed = new Discord.MessageEmbed().setFooter("Reawen tarafından geliştiril
 
 let hedefKişi = message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.author;
 
-let isimler = kdb.get(`isimler.${uye.id}`) || [];
+let isimler = db.get(`isimler.${uye.id}`) || [];
 isimler = isimler.reverse();
 let isimListesi = isimler.length > 0 ? isimler.map((value) => `${value.Isim} | ${value.Yaş} ( <@!${value.Yetkili}> )`).join("\n") : `${client.emojis.cache.get(no)} ${hedefKişi} ( \`${hedefKişi.id}\` ) kullanıcısının geçmiş isimleri bulunamadı.`;
 
