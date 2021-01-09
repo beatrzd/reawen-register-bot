@@ -27,7 +27,7 @@ return message.react(yes);
 };
 
 exports.config = {
-  name: "teyit",
+  name: "vip",
   guildOnly: true,
-  aliases: ["teyitbilgi", "teyitler"],
+  aliases: ["özelüye", "vip"],
 };
