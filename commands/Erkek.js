@@ -32,6 +32,7 @@ return;
 }
 
 db.add(`erkekTeyit.${message.author.id}`, 1);
+db.add(`topTeyit.${message.author.id}`, 1);
 hedefKişi.roles.add("erkek rol idsi");
 hedefKişi.roles.remove("kayıtsız rol idsi");
 message.react(yes);
