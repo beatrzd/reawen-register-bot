@@ -14,6 +14,7 @@ let hedefKişi = message.mentions.members.first() || message.guild.members.cache
 
 let kızTeyit = db.fetch(`kızTeyit.${hedefKişi.id}`) || "0"
 let erkekTeyit = db.fetch(`erkekTeyit.${hedefKişi.id}`) || "0";
+let topTeyit = db.fetch(`topTeyit.${hedefKişi.id}`) || "0";
 
 if (!args[1]) {
 message.channel.send(embed.setDescription(`
@@ -21,7 +22,7 @@ ${client.emojis.cache.get(yes)} ${hedefKişi} ( \`${hedefKişi.id}\` ) isimli ku
     
 Erkek teyit: **${erkekTeyit}**
 Kız teyit: **${kızTeyit}**
-Toplam teyit: **${erkekTeyit + kızTeyit}**
+Toplam teyit: **${topTeyit}**
 `))
 return;
 }
@@ -46,7 +47,7 @@ if (args[1] === "toplam") {
 message.channel.send(embed.setDescription(`
 ${client.emojis.cache.get(yes)} ${hedefKişi} ( \`${hedefKişi.id}\` ) isimli kullanıcının teyit bilgileri:
             
-Erkek teyit: **${erkekTeyit + kızTeyit}**
+Erkek teyit: **${topTeyit}**
 `))
 return;
 } 
