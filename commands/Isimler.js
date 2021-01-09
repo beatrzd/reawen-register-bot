@@ -26,7 +26,7 @@ ${isimListesi}
 };
 
 exports.config = {
-  name: "teyit",
+  name: "isimler",
   guildOnly: true,
-  aliases: ["teyitbilgi", "teyitler"],
+  aliases: ["geçmiş", "names"],
 };
