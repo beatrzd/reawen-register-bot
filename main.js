@@ -107,7 +107,7 @@ client.on("userUpdate", async (oldUser, newUser) => {
 client.on("guildMemberAdd", reawMember => {
 let g = Date.now()-member.user.createdTimestamp < 1000*60*60*24*7;
 const a = new Discord.MessageAttachment("https://cdn.discordapp.com/attachments/791383400664793098/797003351564353576/standard.gif");
-reawMember.channels.cache.get("kayıt kanal idsi").send(`
+reawMember.guild.channels.cache.get("kayıt kanal idsi").send(`
 Sunucumuza hoşgeldin, ${reawMember}! Seninle birlikte ${reawMember.guild.memberCount} kişiyiz! ${g ? ":no_entry_sign:" : ""}
 
 Sunucumuzdaki odalara erişim sağlayabilmek için "Teyit Kanallarında" kayıt olduktan sonra isim yaş belirtmen gerekmektedir.
